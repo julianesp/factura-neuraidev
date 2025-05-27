@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factura Interactiva - neurai.dev</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="factura-container">
+      <!-- Header -->
+      <div class="header">
+        <div class="company-info">
+          <div class="company-name">neurai.dev</div>
+          <div class="company-details">
+            Colón, Putumayo<br />
+            <a href="https://neurai.dev">neurai.dev</a><br />
+            Tel: 3174503604<br />
+            <a href="mailto:julii1295@gmail.com">julii1295@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="invoice-info">
+          <div class="invoice-info-row">
+            <span class="invoice-info-label">Factura No.:</span>
+            <input type="number" class="invoice-number" value="1" min="1" />
+          </div>
+          <div class="invoice-info-row">
+            <span class="invoice-info-label">Fecha factura:</span>
+            <input type="date" class="invoice-date" id="invoiceDate" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bill To Section -->
+      <div class="bill-to">
+        <div class="bill-to-header">COBRAR A:</div>
+
+        <div class="client-info">
+          <span class="client-label">Nombre:</span>
+          <input
+            type="text"
+            class="client-input"
+            value="Institución Etnoeducativa Rural Bilingue Iachai Wasi – Carlos Tamabioy"
+          />
+        </div>
+
+        <div class="client-info">
+          <span class="client-label">Evento:</span>
+          <input
+            type="text"
+            class="client-input"
+            value="Segunda actividad de pilotaje. Visita a la chagra de un sabedor"
+          />
+        </div>
+
+        <div class="client-info">
+          <span class="client-label">Dirección:</span>
+          <input
+            type="text"
+            class="client-input"
+            placeholder="Ingrese dirección"
+          />
+        </div>
+
+        <div class="client-info">
+          <span class="client-label">NIT:</span>
+          <input type="text" class="client-input" value="900433785-3" />
+        </div>
+
+        <div class="client-info">
+          <span class="client-label">No. teléfono:</span>
+          <input
+            type="text"
+            class="client-input"
+            placeholder="Ingrese teléfono"
+          />
+        </div>
+      </div>
+
+      <!-- Services Section -->
+      <div class="services-section">
+        <div class="services-controls">
+          <button class="btn" id="btnAddRow">
+            + Agregar Producto/Servicio
+          </button>
+          <button class="btn btn-danger" id="btnClearAll">Limpiar Todo</button>
+          <button class="btn" id="btnLoadSample">
+            Cargar Datos de Ejemplo
+          </button>
+          <button class="btn btn-success" id="btnNewInvoice">
+            📄 Nueva Factura
+          </button>
+        </div>
+
+        <table class="services-table" id="servicesTable">
+          <thead>
+            <tr>
+              <th style="width: 40%">Descripción</th>
+              <th class="text-center" style="width: 15%">Cantidad</th>
+              <th class="text-right" style="width: 20%">Precio Unitario</th>
+              <th class="text-right" style="width: 20%">Subtotal</th>
+              <th class="text-center" style="width: 5%">Acción</th>
+            </tr>
+          </thead>
+          <tbody id="servicesBody">
+            <!-- Las filas se agregarán dinámicamente -->
+          </tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="3" class="text-right"><strong>TOTAL</strong></td>
+              <td class="text-right currency">
+                <strong id="totalAmount">$0</strong>
+              </td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <!-- Print Section -->
+      <div class="print-section">
+        <button class="btn" id="btnPrint">🖨️ Imprimir Factura</button>
+        <button class="btn" id="btnExport">💾 Exportar Datos</button>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">¡Gracias por su compra!</div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
