@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Factura Interactiva - neurai.dev</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Factura Interactiva - neurai.dev</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main>
+
+
     <div class="factura-container">
       <!-- Header -->
       <div class="header">
         <div class="company-info">
+
+          <div class="logo">
+            <img src="./logo.png" alt="Desarrollador de neurai.dev" />
+          </div>
+
           <div class="company-name">neurai.dev</div>
           <div class="company-details">
             Colón, Putumayo<br />
@@ -34,33 +44,23 @@
 
       <!-- Bill To Section -->
       <div class="bill-to">
-        <div class="bill-to-header">COBRAR A:</div>
+        <div class="bill-to-header">Información del cliente:</div>
 
         <div class="client-info">
           <span class="client-label">Nombre:</span>
-          <input
-            type="text"
-            class="client-input"
-            value="Institución Etnoeducativa Rural Bilingue Iachai Wasi – Carlos Tamabioy"
-          />
+          <input type="text" class="client-input"
+            value="Institución Etnoeducativa Rural Bilingue Iachai Wasi – Carlos Tamabioy" />
         </div>
 
         <div class="client-info">
           <span class="client-label">Evento:</span>
-          <input
-            type="text"
-            class="client-input"
-            value="Segunda actividad de pilotaje. Visita a la chagra de un sabedor"
-          />
+          <input type="text" class="client-input"
+            value="Segunda actividad de pilotaje. Visita a la chagra de un sabedor" />
         </div>
 
         <div class="client-info">
           <span class="client-label">Dirección:</span>
-          <input
-            type="text"
-            class="client-input"
-            placeholder="Ingrese dirección"
-          />
+          <input type="text" class="client-input" placeholder="Ingrese dirección" />
         </div>
 
         <div class="client-info">
@@ -70,11 +70,7 @@
 
         <div class="client-info">
           <span class="client-label">No. teléfono:</span>
-          <input
-            type="text"
-            class="client-input"
-            placeholder="Ingrese teléfono"
-          />
+          <input type="text" class="client-input" placeholder="Ingrese teléfono" />
         </div>
       </div>
 
@@ -97,10 +93,10 @@
           <thead>
             <tr>
               <th style="width: 40%">Descripción</th>
-              <th class="text-center" style="width: 15%">Cantidad</th>
-              <th class="text-right" style="width: 20%">Precio Unitario</th>
-              <th class="text-right" style="width: 20%">Subtotal</th>
-              <th class="text-center" style="width: 5%">Acción</th>
+              <th class="text-center" style="width: 10%">Cantidad</th>
+              <th class="text-right" style="width: 15%">Precio Unitario</th>
+              <th class="text-right" style="width: 15%">Subtotal</th>
+              <th class="text-center" style="width: 5%"></th>
             </tr>
           </thead>
           <tbody id="servicesBody">
@@ -123,11 +119,17 @@
         <button class="btn" id="btnPrint">🖨️ Imprimir Factura</button>
         <button class="btn" id="btnExport">💾 Exportar Datos</button>
       </div>
+  </main>
 
-      <!-- Footer -->
-      <div class="footer">¡Gracias por su compra!</div>
+  <footer>
+
+    <!-- Footer -->
+    <div class="footer">¡Gracias por su compra!</div>
     </div>
+  </footer>
 
-    <script src="./script.js"></script>
-  </body>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>

@@ -23,8 +23,9 @@ function addRow(description = "", quantity = "", price = "") {
 
     row.innerHTML = `
                     <td>
-                        <input type="text" value="${description}" placeholder="Descripción del producto/servicio" 
-                               onchange="calculateRow(${rowCounter})" onkeyup="calculateRow(${rowCounter})">
+                        <input type="text" value="${description.toUpperCase()}" placeholder="Descripción del producto/servicio" 
+                               onchange="calculateRow(${rowCounter})" onkeyup="calculateRow(${rowCounter})"
+                               oninput="this.value = this.value.toUpperCase();">
                     </td>
                     <td class="text-center">
                         <input type="number" value="${quantity}" min="0" step="1" placeholder="0" 
