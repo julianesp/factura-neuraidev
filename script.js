@@ -174,13 +174,13 @@ function loadSampleData() {
     // Limpiar primero
     document.getElementById("servicesBody").innerHTML = "";
 
-    const sampleData = [
-      ["DESAYUNO", 40, 12000],
-      ["REFRIGERIO MAÑANA", 40, 6000],
-      ["ALMUERZO", 40, 17000],
-      ["REFRIGERIO TARDE", 40, 6000],
-      ["semillas de chochos, San Pedro, Yoco Pita y Cascabel", 40, 25000],
-    ];
+    // const sampleData = [
+    //   ["DESAYUNO", 40, 12000],
+    //   ["REFRIGERIO MAÑANA", 40, 6000],
+    //   ["ALMUERZO", 40, 17000],
+    //   ["REFRIGERIO TARDE", 40, 6000],
+    //   ["semillas de chochos, San Pedro, Yoco Pita y Cascabel", 40, 25000],
+    // ];
 
     sampleData.forEach(([desc, qty, price]) => {
       addRow(desc, qty, price);
